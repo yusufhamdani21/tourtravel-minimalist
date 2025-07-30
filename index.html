@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TREVO - Discover Your Next Adventure</title>
+    <title>Zena - Tour and Travel</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +15,7 @@
     <header class="header" id="header">
         <div class="container">
             <nav class="nav">
-                <a href="#" class="logo">TREVO</a>
+                <a href="#home" class="logo"></a>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#destinations" class="nav-link" data-translate="nav.destinations">Destinations</a></li>
                     <li><a href="#features" class="nav-link" data-translate="nav.services">Services</a></li>
@@ -43,7 +46,7 @@
                         </div>
                     </div>
                     
-                    <a href="#explore" class="cta-button" data-translate="nav.book">Book Now →</a>
+                    <a onclick="openWhatsApp()" class="cta-button" data-translate="nav.book">Book Now →</a>
                     
                     <!-- Mobile Menu Button -->
                     <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
@@ -71,23 +74,25 @@
                 </div>
                 
                 <div class="hero-visual">
-                    <div class="travel-card card-1">
-                        <div class="card-icon">🏔️</div>
-                        <div data-translate="hero.cards.mountain">Mountain Adventure</div>
+                    <div class="hero-cards-scroll">
+                        <div class="travel-card card-1">
+                        <div class="card-icon"></div>
+                        <div data-translate="hero.cards.bestBus"></div>
+                        </div>
+                        <div class="travel-card card-2">
+                        <div class="card-icon"></div>
+                        <div data-translate="hero.cards.enjoyTrip"></div>
+                        </div>
+                        <div class="travel-card card-3">
+                        <div class="card-icon"></div>
+                        <div data-translate="hero.cards.holiday"></div>
+                        </div>
                     </div>
-                    <div class="travel-card card-2">
-                        <div class="card-icon">🏖️</div>
-                        <div data-translate="hero.cards.beach">Beach Paradise</div>
-                    </div>
-                    <div class="travel-card card-3">
-                        <div class="card-icon">🏙️</div>
-                        <div data-translate="hero.cards.city">City Explorer</div>
-                    </div>
-                    
+
                     <div class="destination-tags">
-                        <span class="tag">🇺🇸 USA</span>
-                        <span class="tag">🇲🇽 Mexico</span>
-                        <span class="tag">🇯🇵 Japan</span>
+                        <span class="tag">🇮🇩 Bandung</span>
+                        <span class="tag">🇮🇩 Jakarta</span>
+                        <span class="tag">🇮🇩 Surabaya</span>
                     </div>
                 </div>
             </div>
@@ -98,27 +103,33 @@
     <section class="features section" id="features">
         <div class="container">
             <div class="features-header">
-                <h2 class="heading-secondary mb-sm" data-translate="features.title">Why Choose TREVO?</h2>
+                <h2 class="heading-secondary mb-sm" data-translate="features.title">Why Choose Zena?</h2>
                 <p class="text-body" data-translate="features.subtitle">We provide exceptional travel experiences with personalized service and attention to detail</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🗺️</div>
-                    <h3 class="heading-tertiary feature-title" data-translate="features.planning.title">Expert Planning</h3>
-                    <p class="text-body" data-translate="features.planning.desc">Our travel experts craft personalized itineraries tailored to your preferences and budget.</p>
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <h3 class="heading-tertiary feature-title" data-translate="features.best.title"></h3>
+                    <p class="text-body" data-translate="features.best.desc"></p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3 class="heading-tertiary feature-title" data-translate="features.network.title">Global Network</h3>
-                    <p class="text-body" data-translate="features.network.desc">Access to exclusive destinations and local experiences around the world.</p>
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="heading-tertiary feature-title" data-translate="features.agent.title"></h3>
+                    <p class="text-body" data-translate="features.agent.desc"></p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">💝</div>
-                    <h3 class="heading-tertiary feature-title" data-translate="features.support.title">24/7 Support</h3>
-                    <p class="text-body" data-translate="features.support.desc">Round-the-clock assistance to ensure your journey is smooth and worry-free.</p>
+                    <div class="feature-icon"><i class="fas fa-umbrella-beach"></i></div>
+                    <h3 class="heading-tertiary feature-title" data-translate="features.enjoy.title"></h3>
+                    <p class="text-body" data-translate="features.enjoy.desc"></p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                    <h3 class="heading-tertiary feature-title" data-translate="features.personal.title"></h3>
+                    <p class="text-body" data-translate="features.personal.desc"></p>
                 </div>
             </div>
         </div>
@@ -130,46 +141,144 @@
             <div class="destinations-header">
                 <h2 class="heading-secondary" data-translate="destinations.title">Popular Destinations</h2>
                 <div class="destinations-subtitle">
-                    <div class="plane-icon">✈️</div>
+                    <!-- <div class="plane-icon"></div> -->
                     <span data-translate="destinations.subtitle">Handpicked destinations for unforgettable experiences</span>
                 </div>
             </div>
             
             <div class="destinations-grid">
                 <article class="destination-card">
-                    <div class="destination-image">🏔️</div>
+                    <div class="destination-image-sby"></div>
                     <div class="destination-content">
-                        <h3 class="heading-tertiary destination-title" data-translate="destinations.swiss.title">Swiss Alps Adventure</h3>
-                        <p class="destination-location" data-translate="destinations.swiss.location">📍 Switzerland</p>
-                        <p class="text-body mb-sm" data-translate="destinations.swiss.desc">Experience breathtaking mountain views and thrilling outdoor activities in the heart of the Alps.</p>
-                        <div class="destination-price" data-translate="destinations.swiss.price">From $2,499</div>
+                        <h3 class="heading-tertiary destination-title" data-translate="destinations.surabaya.title"></h3>
+                        <p class="destination-location" data-translate="destinations.surabaya.location"></p>
+                        <p class="text-body mb-sm" data-translate="destinations.surabaya.desc"></p>
+                        <div class="destination-price" data-translate="destinations.surabaya.price"></div>
                     </div>
                 </article>
                 
                 <article class="destination-card">
-                    <div class="destination-image">🏖️</div>
+                    <div class="destination-image-bdg"></div>
                     <div class="destination-content">
-                        <h3 class="heading-tertiary destination-title" data-translate="destinations.maldives.title">Maldives Paradise</h3>
-                        <p class="destination-location" data-translate="destinations.maldives.location">📍 Maldives</p>
-                        <p class="text-body mb-sm" data-translate="destinations.maldives.desc">Relax in overwater bungalows and dive into crystal-clear waters of the Indian Ocean.</p>
-                        <div class="destination-price" data-translate="destinations.maldives.price">From $3,299</div>
+                        <h3 class="heading-tertiary destination-title" data-translate="destinations.bandung.title"></h3>
+                        <p class="destination-location" data-translate="destinations.bandung.location"></p>
+                        <p class="text-body mb-sm" data-translate="destinations.bandung.desc"></p>
+                        <div class="destination-price" data-translate="destinations.bandung.price"></div>
                     </div>
                 </article>
                 
                 <article class="destination-card">
-                    <div class="destination-image">🏛️</div>
+                    <div class="destination-image-jkt"></div>
                     <div class="destination-content">
-                        <h3 class="heading-tertiary destination-title" data-translate="destinations.rome.title">Ancient Rome Explorer</h3>
-                        <p class="destination-location" data-translate="destinations.rome.location">📍 Italy</p>
-                        <p class="text-body mb-sm" data-translate="destinations.rome.desc">Walk through history and discover the timeless beauty of the Eternal City.</p>
-                        <div class="destination-price" data-translate="destinations.rome.price">From $1,899</div>
+                        <h3 class="heading-tertiary destination-title" data-translate="destinations.jakarta.title"></h3>
+                        <p class="destination-location" data-translate="destinations.jakarta.location"></p>
+                        <p class="text-body mb-sm" data-translate="destinations.jakarta.desc"></p>
+                        <div class="destination-price" data-translate="destinations.jakarta.price"></div>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <section class="about section" id="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <div class="section-badge">
+                    <span data-translate="span.about.title">✨ About Us</span>
+                </div>
+                <h2 class="heading-secondary about-title" data-translate="about.title">About Zena Travel</h2>
+                <p class="text-body about-description" data-translate="about.description">
+                    With over 10 years of experience in the travel industry, Zena has become Indonesia's most trusted travel partner. We specialize in creating personalized travel experiences that go beyond ordinary tourism.
+                </p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">📅</div>
+                        <span class="stat-number" data-translate="about.stats.years">10+</span>
+                        <span class="stat-label" data-translate="about.stats.yearsLabel">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">😊</div>
+                        <span class="stat-number" data-translate="about.stats.customers">5000+</span>
+                        <span class="stat-label" data-translate="about.stats.customersLabel">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🏖️</div>
+                        <span class="stat-number" data-translate="about.stats.destinations">50+</span>
+                        <span class="stat-label" data-translate="about.stats.destinationsLabel">Destinations</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🎯</div>
+                        <span class="stat-number" data-translate="about.stats.tours">1000+</span>
+                        <span class="stat-label" data-translate="about.stats.toursLabel">Successful Tours</span>
+                    </div>
+                </div>
+                
+                <p class="text-body mission-text" data-translate="about.mission">
+                    
+                </p>
+
+                <div class="about-features">
+                    <div class="feature-point">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="span.protour">Professional Tour Guides</span>
+                    </div>
+                    <div class="feature-point">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="span.cs">24/7 Customer Support</span>
+                    </div>
+                    <div class="feature-point">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="span.price">Best Price Guarantee</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-visual">
+                <div class="visual-container">
+                    <div class="about-image about-image-1">
+                        <div class="image-overlay">
+                            <span>Premium Fleet</span>
+                        </div>
+                    </div>
+                    <div class="about-image about-image-2">
+                        <div class="image-overlay">
+                            <span>Expert Team</span>
+                        </div>
+                    </div>
+                    <div class="about-image about-image-3">
+                        <div class="image-overlay">
+                            <span>Quality Service</span>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-badge">
+                        <div class="badge-content">
+                            <div class="badge-number">10+</div>
+                            <div class="badge-text" data-translate="about.badge">Years of Excellence</div>
+                        </div>
+                    </div>
+
+                    <div class="floating-elements">
+                        <div class="float-element float-1">✈️</div>
+                        <div class="float-element float-2">🎒</div>
+                        <div class="float-element float-3">📸</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="about-bg-elements">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+        <div class="bg-dots"></div>
+    </div>
+</section>
+
+    <!-- Enhanced Gallery Section with Video Support -->
     <section class="gallery section" id="gallery">
         <div class="container">
             <div class="gallery-header">
@@ -177,72 +286,112 @@
                 <p class="text-body" data-translate="gallery.subtitle">Moments captured from our travelers' incredible journeys</p>
             </div>
             
+            <!-- New Enhanced Gallery with Image and Video Support -->
+            <div class="gallery-container">
+                <div class="gallery-item video" data-video="img/Bus-InAndOut-Video.mp4">
+                    <video poster="img/Bus-InAndOut.jpg" muted>
+                        <source src="img/Bus-InAndOut-Video.mp4" type="video/mp4">
+                    </video>
+                    <button class="video-play-button">▶</button>
+                </div>
+                
+                <div class="gallery-item video" data-video="img/HiaceVideo.mp4">
+                    <video poster="img/Hiace.jpg" muted>
+                        <source src="img/HiaceVideo.mp4" type="video/mp4">
+                    </video>
+                    <button class="video-play-button">▶</button>
+                </div>
+            </div>
+            
+            <!-- Original Gallery Grid -->
             <div class="gallery-grid">
-                <div class="gallery-item" data-translate="gallery.adventure">🧗‍♂️ Adventure Sports</div>
-                <div class="gallery-item" data-translate="gallery.sunrise">🌅 Sunrise Views</div>
-                <div class="gallery-item" data-translate="gallery.camping">🏕️ Camping</div>
-                <div class="gallery-item" data-translate="gallery.ocean">⛵ Ocean Safari</div>
-                <div class="gallery-item" data-translate="gallery.cultural">🎨 Cultural Tours</div>
+                <div class="gallery-item" data-translate="gallery.fun"></div>
+                <div class="gallery-item" data-translate="gallery.notif"></div>
+                <div class="gallery-item" data-translate="gallery.comport"></div>
+                <div class="gallery-item" data-translate="gallery.good"></div>
+                <div class="gallery-item" data-translate="gallery.play"></div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer" id="about">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>TREVO</h4>
-                    <p class="text-body" style="color: #A0AEC0;" data-translate="footer.description">
-                        Your trusted travel partner for creating unforgettable adventures and meaningful connections around the world.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-                        <a href="#" class="social-link" aria-label="YouTube">📺</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 data-translate="footer.quickLinks">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#destinations" data-translate="nav.destinations">Destinations</a></li>
-                        <li><a href="#features" data-translate="nav.services">Services</a></li>
-                        <li><a href="#gallery" data-translate="nav.gallery">Gallery</a></li>
-                        <li><a href="#about" data-translate="nav.about">About Us</a></li>
-                        <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 data-translate="footer.services">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#" data-translate="footer.customTours">Custom Tours</a></li>
-                        <li><a href="#" data-translate="footer.groupTravel">Group Travel</a></li>
-                        <li><a href="#" data-translate="footer.adventurePackages">Adventure Packages</a></li>
-                        <li><a href="#" data-translate="footer.luxuryTravel">Luxury Travel</a></li>
-                        <li><a href="#" data-translate="footer.travelInsurance">Travel Insurance</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section" id="contact">
-                    <h4 data-translate="footer.contact">Contact Info</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:hello@trevo.com">📧 hello@trevo.com</a></li>
-                        <li><a href="tel:+1234567890">📱 +1 (234) 567-890</a></li>
-                        <li><a href="#">📍 123 Travel Street, Adventure City</a></li>
-                        <li><a href="#">🌐 www.trevo.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p data-translate="footer.copyright">&copy; 2025 TREVO. All rights reserved. | Privacy Policy | Terms of Service</p>
+    <div class="container">
+        <div class="footer-content">
+        <div class="footer-section">
+            <a href="#home" class="logo-footer" aria-label="Zena Travel Logo"></a>
+            <p class="text-body" style="color: #A0AEC0;" data-translate="footer.description">
+            Your trusted travel partner for creating unforgettable adventures and meaningful connections around the world.
+            </p>
+            <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/zena_tour_travel/" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
+
+        <div class="footer-section">
+            <h4 data-translate="footer.quickLinks">Quick Links</h4>
+            <ul class="footer-links">
+            <li><a href="#destinations" data-translate="nav.destinations">Destinations</a></li>
+            <li><a href="#features" data-translate="nav.services">Services</a></li>
+            <li><a href="#gallery" data-translate="nav.gallery">Gallery</a></li>
+            <li><a href="#about" data-translate="nav.about">About Us</a></li>
+            <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4 data-translate="footer.services">Services</h4>
+            <ul class="footer-links">
+            <li><a href="#" data-translate="footer.customTours">Custom Tours</a></li>
+            <li><a href="#" data-translate="footer.groupTravel">Group Travel</a></li>
+            <li><a href="#" data-translate="footer.adventurePackages">Adventure Packages</a></li>
+            <li><a href="#" data-translate="footer.luxuryTravel">Luxury Travel</a></li>
+            <li><a href="#" data-translate="footer.travelInsurance">Travel Insurance</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" id="contact">
+            <h4 data-translate="footer.contact">Contact Info</h4>
+            <ul class="footer-links">
+            <li><a href="mailto:hello@Zena.com"><i class="fa-solid fa-paper-plane"></i> hello@zena.com</a></li>
+            <li><a href="tel:+1234567890"><i class="fa-solid fa-phone-volume"></i> +(62) 811-2344-507</a></li>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i> Jl. Ibu Ganirah No. 54 RT/RW 03/04 Cibeber, Cimahi Selatan, Cimahi 40531</a></li>
+            <li><a href="#"><i class="fa-solid fa-earth-asia"></i> www.zena.com</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+        <p data-translate="footer.copyright">
+            &copy; 2025 Zena. All rights reserved. | Privacy Policy | Terms of Service
+        </p>
+        </div>
+    </div>
     </footer>
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" id="whatsappFloat">
+        <div class="whatsapp-button" onclick="openWhatsApp()">
+            <i class="fab fa-whatsapp"></i>
+            <div class="pulse-ring"></div>
+        </div>
+        <div class="whatsapp-tooltip">
+            <span data-translate="span.waHelp"></span>
+            <div class="tooltip-arrow"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+        <button id="videoModalClose" class="video-modal-close">×</button>
+        <video id="modalVideo" controls autoplay></video>
+    </div>
+    </div>
+
 </body>
 </html>

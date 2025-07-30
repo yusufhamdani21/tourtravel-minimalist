@@ -16,57 +16,61 @@
                     explore: "Explore Destinations",
                     learn: "Learn More",
                     cards: {
-                        mountain: "Mountain Adventure",
-                        beach: "Beach Paradise",
-                        city: "City Explorer"
+                        bestBus: "The Best Bus Fleet",
+                        enjoyTrip: "Enjoy Your Trip",
+                        holiday: "Explore Your Holiday"
                     }
                 },
                 features: {
-                    title: "Why Choose TREVO?",
+                    title: "Why Choose Zena?",
                     subtitle: "We provide exceptional travel experiences with personalized service and attention to detail",
-                    planning: {
-                        title: "Expert Planning",
-                        desc: "Our travel experts craft personalized itineraries tailored to your preferences and budget."
+                    best: {
+                        title: "Best Travel Provider",
+                        desc: "We're committed to making every vacation a memorable one. With our utmost attention to your memories and experiences, we ensure every step of your trip is smooth and enjoyable."
                     },
-                    network: {
-                        title: "Global Network", 
-                        desc: "Access to exclusive destinations and local experiences around the world."
+                    agent: {
+                        title: "Experienced Agent Services", 
+                        desc: "With extensive experience, our team is ready to provide the best solutions for your every need. Customer satisfaction is our priority, as evidenced by the many repeat customers who return after using our services. Every challenge we've faced has strengthened our commitment to providing exceptional service."
                     },
-                    support: {
-                        title: "24/7 Support",
-                        desc: "Round-the-clock assistance to ensure your journey is smooth and worry-free."
+                    enjoy: {
+                        title: "Enjoy a Carefree Vacation",
+                        desc: "Experience true freedom while on vacation! With comprehensive service across every aspect, you won't have to worry about anything. Let us handle all the details, so you can focus on enjoying every precious moment."
+                    },
+                    personal: {
+                        title: "Premium and Personal Service",
+                        desc: "Experience the difference with our exceptional and personalized service! We prioritize each customer's unique needs, ensuring every experience during your trip is exceptional."
                     }
                 },
                 destinations: {
                     title: "Popular Destinations",
                     subtitle: "Handpicked destinations for unforgettable experiences",
-                    swiss: {
-                        title: "Swiss Alps Adventure",
-                        location: "📍 Switzerland",
-                        desc: "Experience breathtaking mountain views and thrilling outdoor activities in the heart of the Alps.",
-                        price: "From $2,499"
+                    bandung: {
+                        title: "Bandung",
+                        location: "📍 Indonesia",
+                        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt esse temporibus nisi fuga iusto assumenda quasi maxime!",
+                        price: "From Rp 2.000.000"
                     },
-                    maldives: {
-                        title: "Maldives Paradise", 
-                        location: "📍 Maldives",
-                        desc: "Relax in overwater bungalows and dive into crystal-clear waters of the Indian Ocean.",
-                        price: "From $3,299"
+                    jakarta: {
+                        title: "Jakarta", 
+                        location: "📍 Indonesia",
+                        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt esse temporibus nisi fuga iusto assumenda quasi maxime!",
+                        price: "From Rp 3.000.000"
                     },
-                    rome: {
-                        title: "Ancient Rome Explorer",
-                        location: "📍 Italy", 
-                        desc: "Walk through history and discover the timeless beauty of the Eternal City.",
-                        price: "From $1,899"
+                    surabaya: {
+                        title: "Surabaya",
+                        location: "📍 Indonesia", 
+                        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt esse temporibus nisi fuga iusto assumenda quasi maxime!",
+                        price: "From Rp 4.000.000"
                     }
                 },
                 gallery: {
                     title: "Travel Gallery",
                     subtitle: "Moments captured from our travelers' incredible journeys",
-                    adventure: "🧗‍♂️ Adventure Sports",
-                    sunrise: "🌅 Sunrise Views",
-                    camping: "🏕️ Camping",
-                    ocean: "⛵ Ocean Safari",
-                    cultural: "🎨 Cultural Tours"
+                    fun: "Have Fun with Us",
+                    notif: "Caution Notification",
+                    comport: "Comportable Sheet",
+                    good: "Good Car for Your Travel Journey",
+                    play: "Include Game Play for Family or Company"
                 },
                 footer: {
                     description: "Your trusted travel partner for creating unforgettable adventures and meaningful connections around the world.",
@@ -78,7 +82,24 @@
                     adventurePackages: "Adventure Packages", 
                     luxuryTravel: "Luxury Travel",
                     travelInsurance: "Travel Insurance",
-                    copyright: "© 2025 TREVO. All rights reserved. | Privacy Policy | Terms of Service"
+                    copyright: "© 2025 ZENA. All rights reserved. | Privacy Policy | Terms of Service"
+                },
+                span:{
+                    waHelp: "Need Help? Chat with us!",
+                    about:{
+                        title:"✨ About Us"
+                    }
+                },
+                about: {
+                    title:"About Zena Travel",
+                    description:"With over 10 years of experience in the travel industry, Zena has become Indonesia's most trusted travel partner. We specialize in creating personalized travel experiences that go beyond ordinary tourism.",
+                    stats:{
+                        yearsLabel:"Years Experience",
+                        destinationsLabel:"Destinations",
+                        customersLabel:"Happy Customers",
+                        toursLabel:"Successful Tours"
+                    },
+                    mission:"Our mission is to make travel accessible, enjoyable, and memorable for everyone. From family vacations to corporate retreats, we handle every detail so you can focus on creating lasting memories."
                 }
             },
             id: {
@@ -97,45 +118,49 @@
                     explore: "Jelajahi Destinasi",
                     learn: "Pelajari Lebih Lanjut",
                     cards: {
-                        mountain: "Petualangan Gunung",
-                        beach: "Surga Pantai",
-                        city: "Penjelajah Kota"
+                        bestBus: "Armada Bus Terbaik",
+                        enjoyTrip: "Nikmati Perjalanan",
+                        holiday: "Liburan jadi lebih menyenangkan"
                     }
                 },
                 features: {
-                    title: "Mengapa Memilih TREVO?",
+                    title: "Mengapa Memilih Zena?",
                     subtitle: "Kami menyediakan pengalaman perjalanan luar biasa dengan layanan personal dan perhatian terhadap detail",
-                    planning: {
-                        title: "Perencanaan Ahli",
-                        desc: "Para ahli perjalanan kami menyusun itinerary personal yang disesuaikan dengan preferensi dan anggaran Anda."
+                    best: {
+                        title: "Penyedia Perjalanan Terbaik",
+                        desc: "Kami berkomitmen untuk menjadikan setiap liburan tak terlupakan. Dengan perhatian penuh kami terhadap kenangan dan pengalaman Anda, kami memastikan setiap langkah perjalanan Anda lancar dan menyenangkan."
                     },
-                    network: {
-                        title: "Jaringan Global",
-                        desc: "Akses ke destinasi eksklusif dan pengalaman lokal di seluruh dunia."
+                    agent: {
+                        title: "Layanan Agent Berpengalaman",
+                        desc: "Dengan jam terbang yang tinggi, tim kami siap memberikan solusi terbaik untuk setiap kebutuhan Anda. Kepuasan pelanggan adalah prioritas kami, terbukti dari banyaknya pelanggan yang terus kembali setelah menggunakan jasa kami. Setiap tantangan yang kami hadapi telah memperkuat komitmen kami untuk memberikan layanan luar biasa. "
                     },
-                    support: {
-                        title: "Dukungan 24/7",
-                        desc: "Bantuan sepanjang waktu untuk memastikan perjalanan Anda lancar dan bebas khawatir."
+                    enjoy: {
+                        title: "Nikmati Liburan Tanpa Beban",
+                        desc: "Rasakan kebebasan sejati saat berlibur! Dengan pelayanan menyeluruh di setiap aspek, Anda tidak perlu repot mengurus berbagai hal. Biarkan kami yang menangani semua detail, sehingga Anda bisa fokus menikmati setiap momen berharga."
+                    },
+                    personal:{
+                        title:"Pelayanan Premium dan Personal",
+                        desc:"Rasakan perbedaan dengan pelayanan terbaik dan personal yang kami tawarkan! Kami mengutamakan kebutuhan unik setiap pelanggan, memastikan setiap pengalaman Anda selama perjalanan terasa istimewa. "
                     }
                 },
                 destinations: {
                     title: "Destinasi Populer", 
                     subtitle: "Destinasi pilihan untuk pengalaman tak terlupakan",
-                    swiss: {
-                        title: "Petualangan Alps Swiss",
-                        location: "📍 Swiss",
+                    sby: {
+                        title: "Surabaya",
+                        location: "📍 Indonesia",
                         desc: "Rasakan pemandangan gunung yang menakjubkan dan aktivitas luar ruang yang mendebarkan di jantung Alps.",
                         price: "Mulai dari $2,499"
                     },
-                    maldives: {
-                        title: "Surga Maldives",
-                        location: "📍 Maldives", 
+                    bdg: {
+                        title: "Bandung",
+                        location: "📍 Indonesia", 
                         desc: "Bersantai di bungalo di atas air dan menyelam di perairan jernih Samudra Hindia.",
                         price: "Mulai dari $3,299"
                     },
-                    rome: {
-                        title: "Penjelajah Roma Kuno",
-                        location: "📍 Italia",
+                    jkt: {
+                        title: "Jakarta",
+                        location: "📍 Indonesia",
                         desc: "Berjalan melalui sejarah dan temukan keindahan abadi Kota Abadi.", 
                         price: "Mulai dari $1,899"
                     }
@@ -143,11 +168,11 @@
                 gallery: {
                     title: "Galeri Perjalanan",
                     subtitle: "Momen yang diabadikan dari perjalanan luar biasa para wisatawan kami",
-                    adventure: "🧗‍♂️ Olahraga Petualangan",
-                    sunrise: "🌅 Pemandangan Matahari Terbit",
-                    camping: "🏕️ Berkemah",
-                    ocean: "⛵ Safari Laut",
-                    cultural: "🎨 Tur Budaya"
+                    fun: "Bersenag-senanglah",
+                    notif: "Pemberitahuan untuk perhatian",
+                    comport: "Tempat duduk dengan lembaran yang nyaman",
+                    good: "Armada Terbaik",
+                    play: "Termasuk permainan seru untuk keluarga dan kantor"
                 },
                 footer: {
                     description: "Partner perjalanan terpercaya Anda untuk menciptakan petualangan tak terlupakan dan koneksi bermakna di seluruh dunia.",
@@ -159,7 +184,28 @@
                     adventurePackages: "Paket Petualangan",
                     luxuryTravel: "Perjalanan Mewah", 
                     travelInsurance: "Asuransi Perjalanan",
-                    copyright: "© 2025 TREVO. Semua hak dilindungi. | Kebijakan Privasi | Syarat Layanan"
+                    copyright: "© 2025 ZENA. Semua hak dilindungi. | Kebijakan Privasi | Syarat Layanan"
+                },
+                span: {
+                    waHelp: "Butuh bantuan? Chat dengan kami!",
+                    about:{
+                        title:"✨ Tentang Kami"
+                    },
+                    protour:"Pemandu Wisata Profesional",
+                    cs:"Dukungan Pelanggan 24/7",
+                    price:"Jaminan Harga Terbaik"
+                },
+                about: {
+                    title:"Tentang Zena Travel",
+                    description:"Dengan pengalaman lebih dari 10 tahun di industri perjalanan, Zena telah menjadi mitra perjalanan paling tepercaya di Indonesia. Kami berspesialisasi dalam menciptakan pengalaman perjalanan personal yang melampaui pariwisata biasa.",
+                    stats:{
+                        yearsLabel:"Pengalaman",
+                        destinationsLabel:"Destinasi",
+                        customersLabel:"Kepuasan Pelanggan",
+                        toursLabel:"Tingkat Keberhasilan Tour"
+                    },
+                    mission:"Misi kami adalah menjadikan perjalanan mudah diakses, menyenangkan, dan berkesan bagi semua orang. Dari liburan keluarga hingga retret perusahaan, kami mengurus setiap detailnya agar Anda dapat fokus menciptakan kenangan abadi.",
+                    badge:"Tahun Pengalaman"
                 }
             }
         };
@@ -174,7 +220,7 @@
 
             getStoredTheme() {
                 try {
-                    return localStorage.getItem('trevo-theme');
+                    return localStorage.getItem('ZENA-theme');
                 } catch (e) {
                     return null;
                 }
@@ -182,7 +228,7 @@
 
             setStoredTheme(theme) {
                 try {
-                    localStorage.setItem('trevo-theme', theme);
+                    localStorage.setItem('ZENA-theme', theme);
                 } catch (e) {
                     console.warn('Unable to save theme preference');
                 }
@@ -225,7 +271,7 @@
 
             getStoredLanguage() {
                 try {
-                    return localStorage.getItem('trevo-language');
+                    return localStorage.getItem('ZENA-language');
                 } catch (e) {
                     return null;
                 }
@@ -233,7 +279,7 @@
 
             setStoredLanguage(lang) {
                 try {
-                    localStorage.setItem('trevo-language', lang);
+                    localStorage.setItem('ZENA-language', lang);
                 } catch (e) {
                     console.warn('Unable to save language preference');
                 }
@@ -319,6 +365,65 @@
                 return translation;
             }
         }
+        
+        // Video Gallery Manager
+        class VideoGalleryManager {
+            constructor() {
+                this.initVideoGallery();
+            }
+
+            initVideoGallery() {
+                const videoItems = document.querySelectorAll('.gallery-item.video');
+                const modal = document.getElementById('videoModal');
+                const modalVideo = document.getElementById('modalVideo');
+                const closeBtn = document.getElementById('videoModalClose');
+
+                videoItems.forEach(item => {
+                    const playBtn = item.querySelector('.video-play-button');
+                    const videoSrc = item.dataset.video;
+
+                    if (playBtn && videoSrc) {
+                        playBtn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            this.openVideoModal(videoSrc, modal, modalVideo);
+                        });
+                    }
+                });
+
+                if (closeBtn && modal) {
+                    closeBtn.addEventListener('click', () => {
+                        this.closeVideoModal(modal, modalVideo);
+                    });
+
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) {
+                            this.closeVideoModal(modal, modalVideo);
+                        }
+                    });
+                }
+
+                // Close modal with Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal.classList.contains('active')) {
+                        this.closeVideoModal(modal, modalVideo);
+                    }
+                });
+            }
+
+            openVideoModal(videoSrc, modal, modalVideo) {
+                modalVideo.src = videoSrc;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                modalVideo.play();
+            }
+
+            closeVideoModal(modal, modalVideo) {
+                modal.classList.remove('active');
+                modalVideo.pause();
+                modalVideo.src = '';
+                document.body.style.overflow = '';
+            }
+        }
 
         // Mobile menu management
         class MobileMenuManager {
@@ -382,6 +487,10 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', () => {
+            new VideoGalleryManager();
+        });
+
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
@@ -399,11 +508,12 @@
 
         // Observe elements for animation
         document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.feature-card, .destination-card, .gallery-item');
+            const animatedElements = document.querySelectorAll('.feature-card, .destination-card, .gallery-item, .stat-item');
             animatedElements.forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                // el.style.transitionDelay = `${index * 0.1}s`;
                 observer.observe(el);
             });
         });
@@ -540,5 +650,48 @@
                 mobileBtn.textContent = '☰';
             }
         }, 250);
+
+        // WhatsApp Function
+        function openWhatsApp() {
+            const phoneNumber = "6281123445070"; // Ganti dengan nomor WhatsApp Anda
+            const message = "Halo Zena Travel! Saya tertarik untuk bertanya tentang paket tour Anda.";
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Buat tombol
+        const backToTopBtn = document.createElement('div');
+        backToTopBtn.className = 'back-to-top';
+        backToTopBtn.innerHTML = '↑';
+        document.body.appendChild(backToTopBtn);
+
+        // Tampilkan/sembunyikan tombol saat scroll
+        window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 4000) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+        });
+
+        // Fungsi scroll ke atas
+        backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        });
+
+        // Add click animation to WhatsApp button
+        document.getElementById('whatsappFloat').addEventListener('click', function() {
+            const button = this.querySelector('.whatsapp-button');
+            button.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                button.style.transform = '';
+            }, 150);
+        });
 
         window.addEventListener('resize', handleResize);
