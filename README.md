@@ -150,9 +150,7 @@ Dibuat dengan ❤️ untuk para traveler.
 ---
 
 ### **Preview Tampilan**  
-![Travel Tour Landing Page Preview](img/preview.png)  
-
-*(Ganti `preview.png` dengan screenshot project Anda)*  
+![Travel Tour Landing Page Preview](img/preview.png)   
 
 ---
 
@@ -161,4 +159,4 @@ Dibuat dengan ❤️ untuk para traveler.
 - Optimasi gambar dengan **compression** untuk loading lebih cepat.  
 - Deploy gratis via **GitHub Pages** atau **Netlify**.  
 
-🚀 **Siap digunakan!** Customize sesuai kebutuhan bisnis travel Anda.
+🚀 **Siap digunakan!**
