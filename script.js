@@ -519,23 +519,186 @@
         });
 
         // Parallax effect for hero cards
-        let ticking = false;
-        function updateParallax() {
-            const scrolled = window.pageYOffset;
-            const travelCards = document.querySelectorAll('.travel-card');
+        // let ticking = false;
+        // function updateParallax() {
+        //     const scrolled = window.pageYOffset;
+        //     const travelCards = document.querySelectorAll('.travel-card');
             
-            travelCards.forEach((card, index) => {
-                const speed = (index + 1) * 0.05;
-                card.style.transform = `translateY(${scrolled * speed}px)`;
+        //     travelCards.forEach((card, index) => {
+        //         const speed = (index + 1) * 0.05;
+        //         card.style.transform = `translateY(${scrolled * speed}px)`;
+        //     });
+        //     ticking = false;
+        // }
+
+        // window.addEventListener('scroll', function() {
+        //     if (!ticking) {
+        //         requestAnimationFrame(updateParallax);
+        //         ticking = true;
+        //     }
+        // });
+
+        class HeroCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 3;
+                this.slidesContainer = document.getElementById('carouselSlides');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.autoSlideInterval = null;
+                
+                this.init();
+            }
+
+            init() {
+        
+                // Add indicator click events
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Start auto-slide
+                this.startAutoSlide();
+
+                // Pause auto-slide on hover
+                const carousel = document.querySelector('.carousel-container');
+                carousel.addEventListener('mouseenter', () => this.stopAutoSlide());
+                carousel.addEventListener('mouseleave', () => this.startAutoSlide());
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                });
+
+                // Touch/swipe support
+                this.addTouchSupport();
+            }
+
+            goToSlide(slideIndex) {
+                this.currentSlide = slideIndex;
+                const translateX = -slideIndex * 33.333;
+                this.slidesContainer.style.transform = `translateX(${translateX}%)`;
+                this.updateIndicators();
+            }
+
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.goToSlide(this.currentSlide);
+            }
+
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.goToSlide(this.currentSlide);
+            }
+
+            updateIndicators() {
+                this.indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+
+            startAutoSlide() {
+                this.autoSlideInterval = setInterval(() => {
+                    this.nextSlide();
+                }, 5500); // Change slide every 4 seconds
+            }
+
+            stopAutoSlide() {
+                if (this.autoSlideInterval) {
+                    clearInterval(this.autoSlideInterval);
+                    this.autoSlideInterval = null;
+                }
+            }
+
+            addTouchSupport() {
+            let startX = 0;
+            let endX = 0;
+            const threshold = 50; 
+            const carousel = document.querySelector('.hero-carousel');
+
+            carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                this.stopAutoSlide(); // Jeda auto-slide saat interaksi
+            }, { passive: true });
+
+            carousel.addEventListener('touchmove', (e) => {
+                endX = e.touches[0].clientX;
+                // Tambahkan efek mengikuti jari
+                const diff = startX - endX;
+                const translateX = -this.currentSlide * 33.333 - (diff / window.innerWidth * 33.333);
+                this.slidesContainer.style.transform = `translateX(${translateX}%)`;
+            }, { passive: true });
+
+            carousel.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+
+                if (Math.abs(diff) > threshold) {
+                    if (diff > 0) {
+                        this.nextSlide();
+                    } else {
+                        this.prevSlide();
+                    }
+                } else {
+                    // Kembali ke slide saat ini jika swipe tidak cukup jauh
+                    this.goToSlide(this.currentSlide);
+                }
+                
+                // Lanjutkan auto-slide setelah 5.5 detik
+                setTimeout(() => this.startAutoSlide(), 5500);
+            }, { passive: true });
+
+            
+            let isMouseDown = false;
+            
+            carousel.addEventListener('mousedown', (e) => {
+                isMouseDown = true;
+                startX = e.clientX;
+                this.stopAutoSlide();
             });
-            ticking = false;
+
+            carousel.addEventListener('mousemove', (e) => {
+                if (!isMouseDown) return;
+                endX = e.clientX;
+                const diff = startX - endX;
+                const translateX = -this.currentSlide * 33.333 - (diff / window.innerWidth * 33.333);
+                this.slidesContainer.style.transform = `translateX(${translateX}%)`;
+            });
+
+            carousel.addEventListener('mouseup', (e) => {
+                if (!isMouseDown) return;
+                isMouseDown = false;
+                endX = e.clientX;
+                const diff = startX - endX;
+
+                if (Math.abs(diff) > threshold) {
+                    if (diff > 0) {
+                        this.nextSlide();
+                    } else {
+                        this.prevSlide();
+                    }
+                } else {
+                    this.goToSlide(this.currentSlide);
+                }
+                
+                setTimeout(() => this.startAutoSlide(), 2000);
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                if (isMouseDown) {
+                    isMouseDown = false;
+                    this.goToSlide(this.currentSlide);
+                    setTimeout(() => this.startAutoSlide(), 2000);
+                }
+            });
+        }
         }
 
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                requestAnimationFrame(updateParallax);
-                ticking = true;
-            }
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new HeroCarousel();
         });
 
         // Add hover effects to cards
