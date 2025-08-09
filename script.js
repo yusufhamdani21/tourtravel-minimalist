@@ -816,7 +816,7 @@
 
         // WhatsApp Function
         function openWhatsApp() {
-            const phoneNumber = "6281123445070"; // Ganti dengan nomor WhatsApp Anda
+            const phoneNumber = "628112344507"; // Ganti dengan nomor WhatsApp Anda
             const message = "Halo Zena Travel! Saya tertarik untuk bertanya tentang paket tour Anda.";
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
