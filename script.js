@@ -1,4 +1,3 @@
-// Translation data
         const translations = {
             en: {
                 nav: {
@@ -210,7 +209,7 @@
             }
         };
 
-        // Theme management
+        
         class ThemeManager {
             constructor() {
                 this.theme = this.getStoredTheme() || 'light';
@@ -261,7 +260,7 @@
             }
         }
 
-        // Language management
+        
         class LanguageManager {
             constructor() {
                 this.currentLang = this.getStoredLanguage() || 'en';
@@ -366,7 +365,7 @@
             }
         }
         
-        // Video Gallery Manager
+        
         class VideoGalleryManager {
             constructor() {
                 this.initVideoGallery();
@@ -425,7 +424,7 @@
             }
         }
 
-        // Mobile menu management
+        
         class MobileMenuManager {
             constructor() {
                 this.initMobileMenu();
@@ -453,7 +452,7 @@
             }
         }
 
-        // Initialize managers
+        
         const themeManager = new ThemeManager();
         const languageManager = new LanguageManager();
         const mobileMenuManager = new MobileMenuManager();
@@ -816,7 +815,7 @@
 
         // WhatsApp Function
         function openWhatsApp() {
-            const phoneNumber = "628112344507"; // Ganti dengan nomor WhatsApp Anda
+            const phoneNumber = "628112344507";
             const message = "Halo Zena Travel! Saya tertarik untuk bertanya tentang paket tour Anda.";
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
